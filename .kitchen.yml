@@ -1,0 +1,22 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+  - name: ubuntu-12.04
+  - name: centos-7.1
+  - name: centos-6.6
+  - name: windows-2012r2
+
+suites:
+  - name: default
+    run_list:
+      - recipe[consul-cluster::default]
+    attributes:
+      consul-cluster:
+        config:
+          bootstrap-expect: 1

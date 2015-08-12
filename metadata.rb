@@ -14,4 +14,4 @@ supports 'ubuntu', '>= 12.04'
 supports 'arch'
 supports 'windows'
 
-depends 'consul', '~> 1.0'
+depends 'consul', '~> 1.1'

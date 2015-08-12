@@ -1,20 +1,17 @@
 source 'https://rubygems.org'
+gem 'test-kitchen'
 
 group :lint do
   gem 'rubocop'
   gem 'foodcritic', git: 'https://github.com/acrmp/foodcritic'
 end
 
-group :kitchen_common do
-  gem 'test-kitchen', '~> 1.4'
-end
-
 group :kitchen_vagrant do
-  gem 'kitchen-vagrant', '~> 0.17'
+  gem 'kitchen-vagrant'
 end
 
 group :kitchen_cloud do
-  gem 'kitchen-openstack', '~> 1.8'
+  gem 'kitchen-openstack'
 end
 
 group :unit do
