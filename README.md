@@ -1,9 +1,6 @@
 consul-cluster-cookbook
 =======================
-[![Join the chat at https://gitter.im/johnbellone/consul-cookbook](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/johnbellone/consul-cookbook?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-![Release](http://img.shields.io/github/release/johnbellone/consul-cluster-cookbook.svg)
-
-[Wrapper cookbook][0] which installs and configures a [Consul][1] cluster.
+Cluster cookbook which installs and configures a [Consul][1] cluster.
 
 This cookbook utilizies the [Consul application cookbook][2] to
 bootstrap and maintain Consul server infrastructure. It is intended as
@@ -16,8 +13,18 @@ configure the Consul agent to bootstrap a cluster. The minimum number
 of nodes necessary for the infrastructure is three. After three nodes
 have been setup and configured Consul will bootstrap the Cluster.
 
-### Bootstrap Expect
+### Test Kitchen
+If you are looking to execute the integration tests you must first configure
+the policyfile that ships with the test fixtures.
 
-[0]: http://blog.vialstudios.com/the-environment-cookbook-pattern#thewrappercookbook
+```sh
+~/Projects/consul-cluster-cookbook % chef install test/fixtures/policies/default.rb
+~/Projects/consul-cluster-cookbook % kitchen converge ubuntu-1404
+```
+
+## Advanced Usage
+
+### TLS Certificates
+
 [1]: https://consul.io/
 [2]: https://github.com/johnbellone/consul-cookbook
