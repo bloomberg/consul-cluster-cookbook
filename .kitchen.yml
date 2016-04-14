@@ -4,9 +4,7 @@ driver:
 
 provisioner:
   name: policyfile_zero
-
-verifier:
-  name: inspec
+  data_bags_path: test/fixtures/data_bags
 
 platforms:
   - name: ubuntu-14.04

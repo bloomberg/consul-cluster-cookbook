@@ -1,3 +1,7 @@
+require 'chef-vault/test_fixtures'
+require 'serverspec'
+set :backend, :exec
+
 describe service('consul') do
   it { should be_enabled }
   it { should be_running }

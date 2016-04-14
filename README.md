@@ -1,6 +1,6 @@
-consul-cluster-cookbook
-=======================
-Cluster cookbook which installs and configures a [Consul][1] cluster.
+# consul-cluster cookbook
+Cluster cookbook which installs and configures a [Consul][1] cluster
+with TLS certificates.
 
 This cookbook utilizies the [Consul application cookbook][2] to
 bootstrap and maintain Consul server infrastructure. It is intended as

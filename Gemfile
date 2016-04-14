@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'chef-vault-testfixtures', '~> 0.3'
 
 group :lint do
   gem 'rubocop'
