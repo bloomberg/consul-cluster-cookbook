@@ -8,6 +8,18 @@ poise_service_user node['consul']['service_user'] do
   group node['consul']['service_group']
 end
 
+directory File.dirname(node['consul-cluster']['tls']['ssl_key']['path']) do
+  recursive true
+  owner node['consul']['service_user']
+  group node['consul']['service_group']
+end
+
+directory File.dirname(node['consul-cluster']['tls']['ssl_cert']['path']) do
+  recursive true
+  owner node['consul']['service_user']
+  group node['consul']['service_group']
+end
+
 certificate = ssl_certificate node['consul']['service_name'] do
   owner node['consul']['service_user']
   group node['consul']['service_group']
