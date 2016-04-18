@@ -30,6 +30,9 @@ end
 node.default['consul']['config']['server'] = true
 node.default['consul']['config']['verify_incoming'] = false
 node.default['consul']['config']['verify_outgoing'] = false
+node.default['consul']['config']['bind_addr'] = node['ipaddress']
+node.default['consul']['config']['advertise_addr'] = node['ipaddress']
+node.default['consul']['config']['advertise_addr_wan'] = node['ipaddress']
 node.default['consul']['config']['ca_file'] = certificate.chain_path
 node.default['consul']['config']['cert_file'] = certificate.cert_path
 node.default['consul']['config']['key_file'] = certificate.key_path
