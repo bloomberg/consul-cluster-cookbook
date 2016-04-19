@@ -74,6 +74,7 @@ the policyfile that ships with the test fixtures.
 ~/Projects/consul-cluster-cookbook % kitchen converge ubuntu-1404
 ```
 
+[0]: http://blog.vialstudios.com/the-environment-cookbook-pattern#thewrappercookbook
 [1]: https://consul.io/
 [2]: https://github.com/johnbellone/consul-cookbook
 [3]: https://docs.chef.io/config_rb_policyfile.html
