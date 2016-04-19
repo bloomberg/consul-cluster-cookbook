@@ -55,7 +55,7 @@ Chef Server. A more detailed explanation of how to use these commands
 is for the [chef CLI documentation][4].
 
 ```enh-ruby-mode
-name 'vault-cluster'
+name consul-cluster'
 default_source :community
 cookbook 'consul-cluster', '~> 2.0'
 run_list 'consul-cluster::default'
